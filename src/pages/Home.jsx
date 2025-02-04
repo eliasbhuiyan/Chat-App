@@ -6,10 +6,10 @@ import BlockList from "../components/BlockList";
 
 const Home = () => {
   return (
-    <div className="grid grid-cols-2 max-w-xl m-auto h-full gap-10 my-10">
+    <div className="grid grid-cols-2 m-auto h-full gap-10 my-10 max-w-7xl">
       <UserList />
-      <FriendList />
       <FriendRequestList />
+      <FriendList />
       <BlockList />
     </div>
   );

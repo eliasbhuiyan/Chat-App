@@ -3,9 +3,10 @@ import { FaRegUser } from "react-icons/fa";
 import { FiMessageCircle } from "react-icons/fi";
 import { IoMdLogOut } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 const Navbar = () => {
+  const location = useLocation().pathname;
   return (
     <div className="flex flex-col items-center p-4 bg-gradient-to-br from-slate-50 to-gray-100 rounded-xl shadow-xl">
       <div className="text-center mb-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-2xl font-black tracking-tight">
@@ -15,7 +16,9 @@ const Navbar = () => {
         <div className="group relative px-3 cursor-pointer">
           <Link
             to="/"
-            className="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300"
+            className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+              location == "/" ? "bg-blue-100" : ""
+            } hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300`}
           >
             <IoHomeOutline />
           </Link>
@@ -27,7 +30,9 @@ const Navbar = () => {
         <div className="group relative px-3 cursor-pointer">
           <Link
             to="/chat"
-            className="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300"
+            className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+              location == "/chat" ? "bg-blue-100" : ""
+            } hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300`}
           >
             <FiMessageCircle />
           </Link>
@@ -39,7 +44,9 @@ const Navbar = () => {
         <div className="group relative px-3 cursor-pointer">
           <Link
             to="/profile"
-            className="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300"
+            className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+              location == "/profile" ? "bg-blue-100" : ""
+            } hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300`}
           >
             <FaRegUser />
           </Link>
