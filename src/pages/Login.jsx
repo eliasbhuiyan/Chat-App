@@ -4,8 +4,8 @@ import { Link } from "react-router";
 
 const Login = () => {
   return (
-    <div className="relative py-3 max-w-sm sm:mx-auto">
-      <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow-xl rounded-3xl sm:p-10">
+    <div className="h-screen flex items-center justify-center">
+      <div className="relative max-w-sm sm:mx-auto px-4 py-10 bg-white mx-8 md:mx-0 shadow-xl rounded-3xl sm:p-10">
         <div className="max-w-md mx-auto">
           <h2 className="text-center font-semibold text-xl">Log In</h2>
           <div className="mt-5">
